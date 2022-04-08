@@ -14,6 +14,7 @@ models:
     staging:
       +materialized: view # The staging tables cannot be ephemeral
 
+
 vars: 
   dbt_artifacts: 
     dbt_artifacts_database: DBT_WORK # optional, default is your target database 
@@ -25,4 +26,6 @@ vars:
   dbt_artifacts: 
     +schema: BROOKLYNDATA 
   staging: 
-    +schema: BROOKLYNDATA 
+    +schema: BROOKLYNDATA
+  semantic:
+    +schema: semantic
